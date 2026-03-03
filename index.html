@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчання не лише заради НМТ</title>
+    <style>
+        :root { --primary: #1e3c72; --accent: #f39c12; --bg: #f4f7f6; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #333; line-height: 1.6; }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white; padding: 80px 20px; text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .container { max-width: 900px; margin: -50px auto 50px; padding: 0 20px; }
+        section {
+            background: white; padding: 40px; border-radius: 25px;
+            margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; border-left: 6px solid var(--accent); padding-left: 20px; }
+        .img-box {
+            width: 100%; height: auto; border-radius: 15px; margin: 25px 0;
+            overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .img-box img { width: 100%; height: auto; display: block; }
+        .quiz { background: #fdf9f0; padding: 30px; border-radius: 20px; border: 2px dashed var(--accent); }
+        .btn {
+            background: white; border: 2px solid #ddd; padding: 15px; width: 100%;
+            margin: 10px 0; border-radius: 12px; cursor: pointer; font-weight: 600;
+        }
+        .btn:hover { border-color: var(--primary); background: #f0f4ff; }
+        footer { text-align: center; padding: 60px; background: #1a1a1a; color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>📚 Навчання не лише заради НМТ</h1>
+    <p>Твій проєкт про знання та розвиток</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>🔎 Суть питання</h2>
+        <p>Підготовка до тестів — це лише база. Справжня освіта починається там, де ви вчитеся думати самостійно.</p>
+        <div class="img-box">
+            <!-- ПЕРЕВІР, ЩОБ НАЗВА ФАЙЛУ БУЛА ТАКОЮ Ж! -->
+            <img src="foto1.jpg" alt="Library">
+        </div>
+    </section>
+
+    <section>
+        <h2>💡 Шлях до успіху</h2>
+        <p>Використовуйте НМТ як фундамент, але будуйте на ньому власний замок знань.</p>
+        <div class="img-box">
+            <img src="foto2.jpg" alt="Success">
+        </div>
+    </section>
+
+    <section>
+        <h2>🧠 Міні-тест</h2>
+        <div class="quiz">
+            <p><b>Що найважливіше в навчанні?</b></p>
+            <button class="btn" onclick="alert('Вірно! Навички вирішують все.')">Критичне мислення та практика</button>
+            <button class="btn" onclick="alert('Це важливо, але не головне.')">Тільки оцінки</button>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>Проєкт підготував: [Твоє Прізвище]</p>
+</footer>
+
+</body>
+</html>
