@@ -8,68 +8,82 @@
         :root { --primary: #1e3c72; --accent: #f39c12; --bg: #f4f7f6; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #333; line-height: 1.6; }
+        
         header {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white; padding: 80px 20px; text-align: center;
+            color: white; padding: 100px 20px; text-align: center;
             clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         }
-        .container { max-width: 900px; margin: -50px auto 50px; padding: 0 20px; }
+
+        .container { max-width: 1000px; margin: -60px auto 60px; padding: 0 20px; }
+        
         section {
-            background: white; padding: 40px; border-radius: 25px;
-            margin-bottom: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: white; padding: 45px; border-radius: 30px;
+            margin-bottom: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
-        h2 { color: var(--primary); margin-bottom: 20px; font-size: 2rem; border-left: 6px solid var(--accent); padding-left: 20px; }
+
+        h2 { color: var(--primary); margin-bottom: 25px; font-size: 2.2rem; border-left: 8px solid var(--accent); padding-left: 20px; }
+
+        /* ВИПРАВЛЕНІ ФОТО */
         .img-box {
-            width: 100%; height: auto; border-radius: 15px; margin: 25px 0;
-            overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 100%; height: auto; min-height: 300px; border-radius: 20px; 
+            margin: 30px 0; overflow: hidden; background: #e2e8f0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .img-box img { width: 100%; height: auto; display: block; }
-        .quiz { background: #fdf9f0; padding: 30px; border-radius: 20px; border: 2px dashed var(--accent); }
+
+        .img-box img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        .quiz { background: #fdf9f0; padding: 35px; border-radius: 25px; border: 2px dashed var(--accent); }
+        
         .btn {
-            background: white; border: 2px solid #ddd; padding: 15px; width: 100%;
-            margin: 10px 0; border-radius: 12px; cursor: pointer; font-weight: 600;
+            background: white; border: 2px solid #ddd; padding: 18px; width: 100%;
+            margin: 12px 0; border-radius: 15px; cursor: pointer; font-weight: 700; 
+            font-size: 1.1rem; transition: 0.3s;
         }
-        .btn:hover { border-color: var(--primary); background: #f0f4ff; }
-        footer { text-align: center; padding: 60px; background: #1a1a1a; color: white; }
+
+        .btn:hover { border-color: var(--primary); background: #f0f4ff; transform: translateY(-2px); }
+        .correct { background: #2ecc71 !important; color: white; border-color: #27ae60 !important; }
+
+        footer { text-align: center; padding: 80px 20px; background: #1a1a1a; color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>📚 Навчання не лише заради НМТ</h1>
-    <p>Твій проєкт про знання та розвиток</p>
+    <p>Твій повноцінний проєкт про майбутнє та розвиток</p>
 </header>
 
 <div class="container">
     <section>
         <h2>🔎 Суть питання</h2>
-        <p>Підготовка до тестів — це лише база. Справжня освіта починається там, де ви вчитеся думати самостійно.</p>
+        <p>Підготовка до тестів — це лише база. Справжня освіта починається там, де ви вчитеся думати самостійно, аналізувати та створювати щось нове.</p>
         <div class="img-box">
-            <!-- ПЕРЕВІР, ЩОБ НАЗВА ФАЙЛУ БУЛА ТАКОЮ Ж! -->
-            <img src="foto1.jpg" alt="Library">
+            <!-- ТУТ ВИПРАВЛЕНО НА PHOTO -->
+            <img src="photo1.jpg" alt="Library">
         </div>
     </section>
 
     <section>
         <h2>💡 Шлях до успіху</h2>
-        <p>Використовуйте НМТ як фундамент, але будуйте на ньому власний замок знань.</p>
+        <p>Використовуйте НМТ як фундамент, але будуйте на ньому власний замок знань: курси, волонтерство та розвиток Soft Skills.</p>
         <div class="img-box">
-            <img src="foto2.jpg" alt="Success">
+            <img src="photo2.jpg" alt="Success">
         </div>
     </section>
 
     <section>
-        <h2>🧠 Міні-тест</h2>
+        <h2>🧠 Перевір свої цілі</h2>
         <div class="quiz">
-            <p><b>Що найважливіше в навчанні?</b></p>
-            <button class="btn" onclick="alert('Вірно! Навички вирішують все.')">Критичне мислення та практика</button>
-            <button class="btn" onclick="alert('Це важливо, але не головне.')">Тільки оцінки</button>
+            <p style="font-size: 1.3rem; margin-bottom: 15px;"><b>Яка стратегія навчання найефективніша?</b></p>
+            <button class="btn" onclick="this.classList.add('correct')">Баланс: тести + реальна практика</button>
+            <button class="btn" onclick="alert('Це не дасть результату в майбутньому!')">Тільки зубріння відповідей</button>
         </div>
     </section>
 </div>
 
 <footer>
-    <p>Проєкт підготував: [Твоє Прізвище]</p>
+    <p>© 2026 Проєкт для презентації • Всі права захищені</p>
 </footer>
 
 </body>
